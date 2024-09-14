@@ -117,7 +117,12 @@ export const Chromatic = () => (
 
     <h1>With image framework component & with fallback (but broken src)</h1>
     <Avatar.Root className={rootClass()}>
-      <Avatar.Image className={imageClass()} alt="John Smith" onLoadingStatusChange={console.log}>
+      <Avatar.Image
+        className={imageClass()}
+        alt="John Smith"
+        onLoadingStatusChange={console.log}
+        asChild
+      >
         <FakeFrameworkImage src={srcBroken} />
       </Avatar.Image>
       <Avatar.Fallback className={fallbackClass()}>
